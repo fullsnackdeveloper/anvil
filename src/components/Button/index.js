@@ -5,12 +5,20 @@ import "./Button.sass";
 
 class Button extends Component {
   render() {
-    const {children, icon} = this.props;
-    const {symbol} = icon;
-    const classes = classNames("Button");
-    const iconClasses = classNames("mdi", `mdi-${symbol}`);
-    console.log(icon)
-    return <button className={classes}><i className={iconClasses}/>{children}</button>;
+    const {children, icon, size} = this.props;
+    const classes = classNames("Button", size);
+    const iconSymbol = icon
+      ? `mdi-${icon.symbol}`
+      : '';
+    const iconPosition = icon
+      ? icon.position
+      : 'left';
+    const iconClasses = classNames("mdi", iconSymbol, iconPosition);
+
+    return <button className={classes}>
+      {icon && <i className={iconClasses}/>}
+      <span>{children}</span>
+    </button>;
   }
 }
 

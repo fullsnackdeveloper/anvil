@@ -13,7 +13,11 @@ storiesOf("Card", module).add("default", () => (
       image="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80">
       <h5>Card content here</h5>
       <p>Add whatever you want in this area</p>
-      <Button>Read more</Button>
+      <Button
+        icon={{
+        symbol: 'chevron-right',
+        position: 'right'
+      }}>Read more</Button>
     </Card>
   </div>
 ));

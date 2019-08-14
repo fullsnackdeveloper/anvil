@@ -1,20 +1,23 @@
 import classNames from "classnames";
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "./Card.sass";
 
 class Card extends Component {
   render() {
-    const { title, image, flat, children } = this.props;
-    const classes = classNames("Card", { flat });
+    const {title, image, flat, children, center} = this.props;
+    const classes = classNames("Card", {
+      flat
+    }, {center});
     return (
       <div className={classes}>
-        <div className="Card-title">
+        {title && <div className="Card-title">
           <h2>{title}</h2>
-        </div>
+        </div>}
         <div
           className="Card-image"
-          style={{ backgroundImage: `url(${image})` }}
-        />
+          style={{
+          backgroundImage: `url(${image})`
+        }}/>
         <div className="Card-content">{children}</div>
       </div>
     );

@@ -13,22 +13,10 @@
     line-height: 1.6rem
     border-radius: $borderRadius
     display: flex
+    transition: all 0.2s linear
 
-    span
-        order: 2
-
-    i.mdi
-        font-size: 18px
-        order: 1
-        margin-right: 0.5rem
-        margin-left: -0.2rem
-        display: flex
-        line-height: 24px
-
-    i.mdi.right
-        order: 3
-        margin-left: 0.5rem
-        margin-right: -0.2rem
+    &:hover
+        box-shadow: 0 0 1rem rgba(0, 123, 255, 0.5) 
 
     &.small
         font-size: 0.92rem
@@ -48,3 +36,25 @@
             font-size: 22px
             margin-left: -0.5rem
             margin-right: 0.4rem
+
+    span
+        order: 2
+        display: flex
+
+    i.mdi
+        font-size: 18px
+        order: 1
+        margin-right: 0.5rem
+        margin-left: -0.2rem
+        display: flex
+        line-height: 24px
+
+    i.mdi.right
+        order: 3
+        margin-left: 0.5rem
+        margin-right: -0.2rem
+
+    &.block
+        display: flex
+        width: 100%
+        justify-content: center

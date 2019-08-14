@@ -2,9 +2,8 @@
     
 .Card
     border-radius: $borderRadius
-    overflow: hidden
     max-width: 300px
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35)
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2)
 
     &.center
         text-align: center
@@ -32,6 +31,11 @@
         height: 12em
         background-size: cover
         background-position: center center
+        border-radius: $borderRadius $borderRadius 0 0
+
+    
+    &.withTitle .Card-image
+        border-radius: 0
 
     &-content
         padding: 2rem

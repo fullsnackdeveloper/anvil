@@ -18,6 +18,9 @@ class Card extends Component {
       center,
       withAvatar: avatar
         ? true
+        : false,
+      withTitle: title
+        ? true
         : false
     });
     return (

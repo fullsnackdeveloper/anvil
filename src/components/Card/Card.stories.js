@@ -121,15 +121,28 @@ storiesOf("Card", module).add("default", () => (
     </Card>
   </div>
 )).add("with no image", () => (
-  <div className="story-spacer">
-    <Card >
-      <h5>Card content here</h5>
-      <p>Add whatever you want in this area</p>
-      <Button
-        icon={{
-        symbol: 'chevron-right',
-        position: 'right'
-      }}>Read more</Button>
-    </Card>
+  <div>
+    <div className="story-spacer">
+      <Card >
+        <h5>Card content here</h5>
+        <p>Add whatever you want in this area</p>
+        <Button
+          icon={{
+          symbol: 'chevron-right',
+          position: 'right'
+        }}>Read more</Button>
+      </Card>
+    </div>
+    <div className="story-spacer">
+      <Card avatar={avatar}>
+        <h5>Card content here</h5>
+        <p>Add whatever you want in this area</p>
+        <Button
+          icon={{
+          symbol: 'chevron-right',
+          position: 'right'
+        }}>Read more</Button>
+      </Card>
+    </div>
   </div>
 ))

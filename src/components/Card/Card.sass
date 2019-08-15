@@ -4,6 +4,9 @@
     border-radius: $borderRadius
     max-width: 300px
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2)
+    background-size: cover
+    background-position: center center
+    position: relative
 
     &.center
         text-align: center
@@ -18,8 +21,14 @@
     &.withAvatar .Card-content
         padding-top: 3rem
 
+    &-container
+        display: flex
+        flex-grow: 1
+        flex-direction: column
+
     &-title
         padding: 1.6rem 2rem
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
 
         h2
             font-size: 1.3rem
@@ -45,3 +54,66 @@
         position: absolute
         top: 0
         transform: translateY(-50%)
+
+    &.withAvatar .Card-title, &.withImage.withAvatar.fullBackground .Card-title
+        padding: 1.6rem 2rem 2.4rem
+
+    &.withImage.withAvatar .Card-title
+        padding: 1.6rem 2rem
+
+    &.horizontal
+        display: flex
+        flex-direction: column
+        max-width: 500px
+
+        &.withAvatar .Card-avatar
+            bottom: 0
+            left: 0
+            top: initial
+            transform: translate(50%, -50%)
+
+        &.withAvatar .Card-content
+            padding: 2rem
+
+        .Card-container
+            flex-direction: row
+
+        .Card-image
+            height: initial
+            max-width: 200px
+            border-radius: $borderRadius 0 0 $borderRadius
+
+        .Card-avatar
+            left: 0
+            top: 2rem
+            transform: translateX(-50%)
+
+        &.imageRight
+            .Card-image
+                order: 3
+                border-radius: 0 $borderRadius $borderRadius 0
+
+            .Card-content
+                order: 1
+
+            &.withAvatar .Card-avatar
+                left: initial
+                right: 0
+                transform: translate(-50%, -50%)
+
+        &.withTitle 
+            .Card-image
+                border-radius: $borderRadius 0 0 $borderRadius
+
+            &.fullwidthTitle .Card-image
+                border-radius: 0 0 0 $borderRadius
+                
+
+            &.imageRight .Card-image
+                border-radius: 0 $borderRadius $borderRadius 0
+
+            &.imageRight.fullwidthTitle .Card-image
+                border-radius: 0 0 $borderRadius 0
+
+    &.fullBackground .Card-title
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3)

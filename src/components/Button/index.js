@@ -6,7 +6,6 @@ import "./Button.sass";
 class Button extends Component {
   render() {
     const {children, icon, size, block} = this.props;
-    console.log(block)
     const classes = classNames("Button", size, {block});
     const iconSymbol = icon
       ? `mdi-${icon.symbol}`
